@@ -1,0 +1,236 @@
+2024/07/20 14:20:19 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "gii". in C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(141): CWebApplication->runController('gii')
+#1 C:\xampp\htdocs\yiiframework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\blog\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blog/index.php?r=gii
+---
+2024/07/20 14:20:27 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "gii/crud/index". in C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#1 C:\xampp\htdocs\yiiframework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\blog\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blog/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/blog/index.php?r=gii/model/index
+---
+2024/07/20 14:20:32 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "gii/model/index". in C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#1 C:\xampp\htdocs\yiiframework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\blog\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/blog/index.php?r=gii/model/index
+---
+2024/07/20 14:21:05 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'testdrive' in C:\xampp\htdocs\yiiframework\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\xampp\htdocs\yiiframework\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yiiframework\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\xampp\htdocs\yiiframework\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yiiframework\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\xampp\htdocs\yiiframework\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\xampp\htdocs\yiiframework\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\xampp\htdocs\yiiframework\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\xampp\htdocs\yiiframework\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\xampp\htdocs\yiiframework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yiiframework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yiiframework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 C:\xampp\htdocs\yiiframework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\blog\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/blog/index.php?r=gii/model/index
+---
+2024/07/21 08:59:18 [error] [exception.CException] CException: Property "CDbConnection.name" is not defined. in C:\xampp\htdocs\yiiframework\framework\base\CComponent.php:172
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\framework\YiiBase.php(227): CComponent->__set('name', 'root')
+#1 C:\xampp\htdocs\yiiframework\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\yiiframework\framework\base\CApplication.php(459): CModule->getComponent('db')
+#3 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(639): CApplication->getDb()
+#4 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(672): CActiveRecord->getDbConnection()
+#5 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(1604): CActiveRecord->getCommandBuilder()
+#6 C:\xampp\htdocs\yiiframework\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#7 C:\xampp\htdocs\yiiframework\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#8 C:\xampp\htdocs\yiiframework\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#9 C:\xampp\htdocs\yiiframework\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#10 C:\xampp\htdocs\yiiframework\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#11 C:\xampp\htdocs\yiiframework\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#12 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(147): CListView->init()
+#13 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#14 C:\xampp\htdocs\blog\protected\views\post\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#15 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#16 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#17 C:\xampp\htdocs\yiiframework\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#18 C:\xampp\htdocs\yiiframework\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#19 C:\xampp\htdocs\blog\protected\controllers\PostController.php(199): CController->render('index', Array)
+#20 C:\xampp\htdocs\yiiframework\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#21 C:\xampp\htdocs\yiiframework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 C:\xampp\htdocs\yiiframework\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yiiframework\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\xampp\htdocs\yiiframework\framework\web\CController.php(291): CFilterChain->run()
+#28 C:\xampp\htdocs\yiiframework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(282): CController->run('')
+#30 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(141): CWebApplication->runController('post')
+#31 C:\xampp\htdocs\yiiframework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#32 C:\xampp\htdocs\blog\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/blog/index.php?r=post
+---
+2024/07/21 09:01:26 [error] [exception.CException] CException: Property "CDbConnection.name" is not defined. in C:\xampp\htdocs\yiiframework\framework\base\CComponent.php:172
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\framework\YiiBase.php(227): CComponent->__set('name', 'root')
+#1 C:\xampp\htdocs\yiiframework\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\yiiframework\framework\base\CApplication.php(459): CModule->getComponent('db')
+#3 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(639): CApplication->getDb()
+#4 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(672): CActiveRecord->getDbConnection()
+#5 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(1604): CActiveRecord->getCommandBuilder()
+#6 C:\xampp\htdocs\yiiframework\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#7 C:\xampp\htdocs\yiiframework\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#8 C:\xampp\htdocs\yiiframework\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#9 C:\xampp\htdocs\yiiframework\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#10 C:\xampp\htdocs\yiiframework\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#11 C:\xampp\htdocs\yiiframework\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#12 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(147): CListView->init()
+#13 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#14 C:\xampp\htdocs\blog\protected\views\post\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#15 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#16 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#17 C:\xampp\htdocs\yiiframework\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#18 C:\xampp\htdocs\yiiframework\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#19 C:\xampp\htdocs\blog\protected\controllers\PostController.php(199): CController->render('index', Array)
+#20 C:\xampp\htdocs\yiiframework\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#21 C:\xampp\htdocs\yiiframework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 C:\xampp\htdocs\yiiframework\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yiiframework\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\xampp\htdocs\yiiframework\framework\web\CController.php(291): CFilterChain->run()
+#28 C:\xampp\htdocs\yiiframework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(282): CController->run('')
+#30 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#31 C:\xampp\htdocs\yiiframework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#32 C:\xampp\htdocs\blog\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/blog/index.php
+---
+2024/07/21 09:01:57 [error] [exception.CException] CException: Property "CDbConnection.name" is not defined. in C:\xampp\htdocs\yiiframework\framework\base\CComponent.php:172
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\framework\YiiBase.php(227): CComponent->__set('name', 'root')
+#1 C:\xampp\htdocs\yiiframework\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\yiiframework\framework\base\CApplication.php(459): CModule->getComponent('db')
+#3 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(639): CApplication->getDb()
+#4 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(672): CActiveRecord->getDbConnection()
+#5 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(1604): CActiveRecord->getCommandBuilder()
+#6 C:\xampp\htdocs\yiiframework\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#7 C:\xampp\htdocs\yiiframework\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#8 C:\xampp\htdocs\yiiframework\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#9 C:\xampp\htdocs\yiiframework\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#10 C:\xampp\htdocs\yiiframework\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#11 C:\xampp\htdocs\yiiframework\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#12 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(147): CListView->init()
+#13 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#14 C:\xampp\htdocs\blog\protected\views\post\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#15 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#16 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#17 C:\xampp\htdocs\yiiframework\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#18 C:\xampp\htdocs\yiiframework\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#19 C:\xampp\htdocs\blog\protected\controllers\PostController.php(199): CController->render('index', Array)
+#20 C:\xampp\htdocs\yiiframework\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#21 C:\xampp\htdocs\yiiframework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 C:\xampp\htdocs\yiiframework\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yiiframework\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\xampp\htdocs\yiiframework\framework\web\CController.php(291): CFilterChain->run()
+#28 C:\xampp\htdocs\yiiframework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(282): CController->run('')
+#30 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#31 C:\xampp\htdocs\yiiframework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#32 C:\xampp\htdocs\blog\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/blog/
+---
+2024/07/21 09:04:15 [error] [exception.CException] CException: Property "CDbConnection.name" is not defined. in C:\xampp\htdocs\yiiframework\framework\base\CComponent.php:172
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\framework\YiiBase.php(227): CComponent->__set('name', 'root')
+#1 C:\xampp\htdocs\yiiframework\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\yiiframework\framework\base\CApplication.php(459): CModule->getComponent('db')
+#3 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(639): CApplication->getDb()
+#4 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(672): CActiveRecord->getDbConnection()
+#5 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(1604): CActiveRecord->getCommandBuilder()
+#6 C:\xampp\htdocs\yiiframework\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#7 C:\xampp\htdocs\yiiframework\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#8 C:\xampp\htdocs\yiiframework\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#9 C:\xampp\htdocs\yiiframework\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#10 C:\xampp\htdocs\yiiframework\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#11 C:\xampp\htdocs\yiiframework\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#12 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(147): CListView->init()
+#13 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#14 C:\xampp\htdocs\blog\protected\views\post\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#15 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#16 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#17 C:\xampp\htdocs\yiiframework\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#18 C:\xampp\htdocs\yiiframework\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#19 C:\xampp\htdocs\blog\protected\controllers\PostController.php(199): CController->render('index', Array)
+#20 C:\xampp\htdocs\yiiframework\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#21 C:\xampp\htdocs\yiiframework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 C:\xampp\htdocs\yiiframework\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yiiframework\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\xampp\htdocs\yiiframework\framework\web\CController.php(291): CFilterChain->run()
+#28 C:\xampp\htdocs\yiiframework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(282): CController->run('')
+#30 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#31 C:\xampp\htdocs\yiiframework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#32 C:\xampp\htdocs\blog\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/blog/
+---
+2024/07/21 09:04:16 [error] [exception.CException] CException: Property "CDbConnection.name" is not defined. in C:\xampp\htdocs\yiiframework\framework\base\CComponent.php:172
+Stack trace:
+#0 C:\xampp\htdocs\yiiframework\framework\YiiBase.php(227): CComponent->__set('name', 'root')
+#1 C:\xampp\htdocs\yiiframework\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\yiiframework\framework\base\CApplication.php(459): CModule->getComponent('db')
+#3 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(639): CApplication->getDb()
+#4 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(672): CActiveRecord->getDbConnection()
+#5 C:\xampp\htdocs\yiiframework\framework\db\ar\CActiveRecord.php(1604): CActiveRecord->getCommandBuilder()
+#6 C:\xampp\htdocs\yiiframework\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#7 C:\xampp\htdocs\yiiframework\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#8 C:\xampp\htdocs\yiiframework\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#9 C:\xampp\htdocs\yiiframework\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#10 C:\xampp\htdocs\yiiframework\framework\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#11 C:\xampp\htdocs\yiiframework\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#12 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(147): CListView->init()
+#13 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#14 C:\xampp\htdocs\blog\protected\views\post\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#15 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#16 C:\xampp\htdocs\yiiframework\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#17 C:\xampp\htdocs\yiiframework\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#18 C:\xampp\htdocs\yiiframework\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#19 C:\xampp\htdocs\blog\protected\controllers\PostController.php(199): CController->render('index', Array)
+#20 C:\xampp\htdocs\yiiframework\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#21 C:\xampp\htdocs\yiiframework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 C:\xampp\htdocs\yiiframework\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yiiframework\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\xampp\htdocs\yiiframework\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\xampp\htdocs\yiiframework\framework\web\CController.php(291): CFilterChain->run()
+#28 C:\xampp\htdocs\yiiframework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(282): CController->run('')
+#30 C:\xampp\htdocs\yiiframework\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#31 C:\xampp\htdocs\yiiframework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#32 C:\xampp\htdocs\blog\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/blog/
+---
